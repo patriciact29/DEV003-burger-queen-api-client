@@ -1,12 +1,17 @@
+
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(https://raw.githubusercontent.com/patriciact29/DEV003-burger-queen-api-client/main/burger-queen/media/patron_BG2.jpg);
 }
+
 
 .rectangle{
     box-sizing: border-box;
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
     width: 875px;
@@ -19,7 +24,6 @@
 
 #user{
     box-sizing: border-box;
-    position: absolute;
     width: 360px;
     height: 44px;
     left: 417px;
@@ -32,7 +36,6 @@
 
 #password{
     box-sizing: border-box;
-    position: absolute;
     width: 360px;
     height: 44px;
     left: 417px;
@@ -43,7 +46,6 @@
     border-radius: 30px;
 }
 #loginBtn{
-    position: absolute;
     width: 200px;
     height: 50px;
     left: 497px;
@@ -58,7 +60,6 @@
     letter-spacing: 0.03em;
     color: #FFFFFF;
 }
-
 #userTittle{
 position: absolute;
 width: 200px;
