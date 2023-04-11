@@ -5,10 +5,15 @@
 
       </div>
         <div class="rectangle">
-            <img src="https://raw.githubusercontent.com/patriciact29/DEV003-burger-queen-api-client/main/burger-queen/media/LOGO_BQ1.png"  alt="logo" width="270" height="240">
-            <input type="email" id="user" placeholder="Usuario">
-            <input type="password" id="password" placeholder="Contraseña">
+            <label id="userTittle">Usuario</label>
+            <input type="email" [formControl]="user" id="user" placeholder="Usuario">
+            <label id="passwTittle">Contraseña</label>
+            <input type="password" [formControl]="password" id="password" placeholder="Contraseña">
+            <img src="https://raw.githubusercontent.com/patriciact29/DEV003-burger-queen-api-client/main/burger-queen/media/LOGO_BQ1.png"  alt="logo" width="400" height="341">
             <button type="submit" id="loginBtn">INGRESAR</button>
         </div>
     </form>
 </div>
+{{ user.value }}
+{{ password.value }}
+
