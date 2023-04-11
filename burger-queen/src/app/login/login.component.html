@@ -2,9 +2,14 @@
 <div class="container">
     <form>
         <div class="rectangle">
-            <input type="email" id="user" placeholder="Usuario">
-            <input type="password" id="password" placeholder="Contraseña">
+            <label id="userTittle">Usuario</label>
+            <input type="email" [formControl]="user" id="user" placeholder="Usuario">
+            <label id="passwTittle">Contraseña</label>
+            <input type="password" [formControl]="password" id="password" placeholder="Contraseña">
             <button type="submit" id="loginBtn">INGRESAR</button>
         </div>
     </form>
 </div>
+
+{{ user.value }}
+{{ password.value }}
