@@ -1,13 +1,15 @@
-
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url(https://raw.githubusercontent.com/patriciact29/DEV003-burger-queen-api-client/main/burger-queen/media/patron_BG2.jpg);
-}
+    background-position: 300px;
+    background-attachment: fixed;
+  }
 
 
 .rectangle{
+    margin-top: 80px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
