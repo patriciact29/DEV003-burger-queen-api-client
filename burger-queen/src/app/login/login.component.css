@@ -1,15 +1,18 @@
-.container{
+* {
+    font-family: 'Anton', sans-serif;
+  }
+  
+  .container {
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url(https://raw.githubusercontent.com/patriciact29/DEV003-burger-queen-api-client/main/burger-queen/media/patron_BG2.jpg);
-    background-position: 300px;
+    height: 100vh;
     background-attachment: fixed;
   }
-
-
-.rectangle{
-    margin-top: 80px;
+  
+  
+  .rectangle {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -22,8 +25,9 @@
     border: 1px solid #88472E;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
-}
-#user{
+  }
+  
+  #user {
     box-sizing: border-box;
     width: 360px;
     height: 44px;
@@ -33,9 +37,9 @@
     border: 1px solid #000000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
-}
-
-#password{
+  }
+  
+  #password {
     box-sizing: border-box;
     width: 360px;
     height: 44px;
@@ -45,8 +49,9 @@
     border: 1px solid #000000;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
-}
-#loginBtn{
+  }
+  
+  #loginBtn {
     width: 200px;
     height: 50px;
     left: 497px;
@@ -60,29 +65,17 @@
     line-height: 38px;
     letter-spacing: 0.03em;
     color: #FFFFFF;
-}
-#userTittle{
-width: 200px;
-height: 38px;
-font-family: 'Anton';
-font-style: normal;
-font-weight: 400;
-font-size: 25px;
-line-height: 38px;
-letter-spacing: 0.05em;
-color: #484746;
-}
-
-#passwTittle{
-width: 255px;
-height: 38px;
-font-family: 'Anton';
-font-style: normal;
-font-weight: 400;
-font-size: 25px;
-line-height: 38px;
-/* identical to box height */
-letter-spacing: 0.05em;
-color: #484746;
-
-}
+  }
+  
+  .labelLogin {
+    display: flex;
+    margin-left: -8rem;
+    width: 200px;
+    height: 38px;
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 38px;
+    letter-spacing: 0.05em;
+    color: #484746;
+  }
