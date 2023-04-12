@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
 
 
 const appRoutes:Routes=[
@@ -18,7 +19,8 @@ const appRoutes:Routes=[
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    UpdatepopupComponent
   ],
   imports: [
     BrowserModule,
