@@ -1,0 +1,90 @@
+*{
+    font-family: 'Anton', sans-serif;
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://raw.githubusercontent.com/patriciact29/DEV003-burger-queen-api-client/main/burger-queen/media/patron_BG2.jpg);
+    height: 100vh;
+    background-attachment: fixed;
+  }
+  .conteinerhome{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 875px;
+    height: 614px;
+    background: #FFFFFF;
+    border: 1px solid #88472E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+  }
+  #nav{
+      display: flex;
+      text-align: center;
+      margin: 25px 0 0 25px;
+      padding: 20px;
+      width: 100%;
+      float: left;
+      gap: 2rem;
+  
+  }
+  .btnNav{
+    width: 314px;
+    height: 51px;
+    background: white;
+    border:none;
+    border-radius: 30px;
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: 0.03em;
+    color: 000000;
+  
+  }
+  .fa-light {
+    width: 50px;
+    height: auto;
+  
+    }
+  
+  nav button:hover{
+    color: white;
+    background:#91A61D;
+  }
+  
+  main{
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  .tablesbtns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    gap: 3rem;
+    flex-direction:row;
+    flex-wrap: wrap;
+  }
+  .tableBtn{
+    width: 133px;
+    height: 101px;
+    background: #ED8B06;
+    border:white;
+    border-radius: 30px;
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 38px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
+  }
