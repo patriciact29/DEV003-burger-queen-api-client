@@ -1,18 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {AppRoutingModule} from './app.routing.module'
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
-
-
-const appRoutes:Routes=[
-{path:'',component:LoginComponent},//crear objeto por cada ruta
-{path:'home',component:HomeComponent}
-]
 
 
 @NgModule({
@@ -20,14 +14,15 @@ const appRoutes:Routes=[
     AppComponent,
     LoginComponent,
     HomeComponent,
-    UpdatepopupComponent
+    UpdatepopupComponent,
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
+    AppRoutingModule,
+    // RouterModule.forRoot(appRoutes),
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
