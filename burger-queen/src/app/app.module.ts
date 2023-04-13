@@ -6,7 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
+import { HttpClientModule } from "@angular/common/http";
 
 
 const appRoutes:Routes=[
@@ -20,14 +20,14 @@ const appRoutes:Routes=[
     AppComponent,
     LoginComponent,
     HomeComponent,
-    UpdatepopupComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
