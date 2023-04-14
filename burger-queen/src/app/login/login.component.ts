@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr'
 import { AuthService } from '../service/auth.service';
-import { first } from 'rxjs';
+
 
 
 @Component({
@@ -19,12 +18,7 @@ export class LoginComponent{
   constructor(
     private  router: Router,
     private  builder: FormBuilder,
-    // private  toastr: ToastrService,
     private  auth: AuthService) {
-    // this.router$ = router;
-    // this.builder$ = builder;
-    // this.auth$ = auth;
-
     this.formLogin = this.builder.group({
       user: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(6)]]
@@ -36,20 +30,23 @@ export class LoginComponent{
     const val = this.formLogin.value;
     this.auth.login(val.user, val.password).subscribe((data) => {
       console.log(data);
+      if(val.user && val.password){
+        this.auth.login(val.user, val.password)
+        .subscribe(
+          () => {
+            this.router.navigateByUrl('home')
+          }
+        )
+      }
+
+
     });
   }
 
 
     // const val = this.formLogin.value;
 
-    // if(val.user && val.password){
-    //   this.auth.login(val.user, val.password)
-    //   .subscribe(
-    //     () => {
-    //       this.router.navigateByUrl('/home')
-    //     }
-    //   )
-    // }
+
   }
   // ngOnInit(): void {
   //   throw new Error('Method not implemented.');
