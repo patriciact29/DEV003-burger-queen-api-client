@@ -5,7 +5,6 @@ import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../service/auth.service';
 
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -21,6 +20,7 @@ export class LoginComponent{
     private  builder: FormBuilder,
     private toastr: ToastrService,
     private  auth: AuthService) {
+
     this.formLogin = this.builder.group({
       user: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(6)]]
@@ -53,47 +53,5 @@ export class LoginComponent{
   }
 
   }
-  // ngOnInit(): void {
-  //   throw new Error('Method not implemented.');
-  // }
 
-  // get formlogin() { return this.form.controls; }
-
-  // ngOnInit() {
-  //   this.loginform();
-  // }
-  // loginform(){
-
-  //}
-  // user = new FormControl('', Validators.required);
-  // password = new FormControl('', [Validators.required, Validators.minLength(6)]);
-
-// onSubmit(): void {
-//   const data = this.form.value;
-
-//   this.service.login(data.user, data.password).suscribe({
-//     next:(result) =>{
-//       sessionStorage.setItem('token', result.accesToken)
-//       console.log(result.accesToken);
-//       this.router.navigate(['home']);
-//     }
-
-//     },
-//   })
-
-  // if (this.formlogin.user.status === 'INVALID' || this.formlogin.password.status === 'INAVALID') {
-  //   return;
-  // }
-
-// this.auth$.login(values.user, values.password)
-// .pipe(first())
-// .subscribe(response=>{
-//   debugger;
-//   console.log(response);
-//   if (response){
-//     localStorage.setItem('Token', response);
-//     this.router$.navigate(['/home']);
-//   }
-// })
-//}
 
