@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../service/auth.service';
 
 
@@ -18,6 +19,7 @@ export class LoginComponent{
   constructor(
     private  router: Router,
     private  builder: FormBuilder,
+    private toastr: ToastrService,
     private  auth: AuthService) {
     this.formLogin = this.builder.group({
       user: ['', Validators.required],
@@ -26,26 +28,29 @@ export class LoginComponent{
 
   }
 
-  login(){
+  login() : void{
+    console.log("aqui");
     const val = this.formLogin.value;
-    this.auth.login(val.user, val.password).subscribe((data) => {
-      console.log(data);
-      if(val.user && val.password){
-        this.auth.login(val.user, val.password)
-        .subscribe(
-          () => {
-            this.router.navigateByUrl('home')
-          }
-        )
+    console.log(val.user, val.password);
+
+    this.auth.login(val.user, val.password).subscribe({next:(res) => {
+      console.log(res);
+      sessionStorage.setItem('token', res.accessToken);
+      sessionStorage.setItem('idUser', res.user.id);
+      this.router.navigate(['home']);
+      console.log(res.accessToken);
+
+    },
+    error: (error) => {
+      console.log(error);
+      if (error.status === 400) {
+        this.toastr.error(error.error, 'Credenciales no validas');
+      } else {
+        this.toastr.error('Un error inesperado', 'Error');
       }
-
-
+    },
     });
   }
-
-
-    // const val = this.formLogin.value;
-
 
   }
   // ngOnInit(): void {
@@ -72,13 +77,7 @@ export class LoginComponent{
 //       console.log(result.accesToken);
 //       this.router.navigate(['home']);
 //     }
-//     error: (error) => {
-//       console.log(error);
-//       if (error.status === 400) {
-//         this.toastr.error(error.error, 'Credenciales no validas');
-//       } else {
-//         this.toastr.error('An unexpected error occurred', 'Error');
-//       }
+
 //     },
 //   })
 
