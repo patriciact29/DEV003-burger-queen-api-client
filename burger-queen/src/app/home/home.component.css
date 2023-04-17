@@ -30,7 +30,7 @@
       width: 100%;
       float: left;
       gap: 2rem;
-  
+
   }
   .btnNav{
     width: 314px;
@@ -44,19 +44,19 @@
     line-height: 38px;
     letter-spacing: 0.03em;
     color: 000000;
-  
+
   }
   .fa-light {
     width: 50px;
     height: auto;
-  
+
     }
-  
+
   nav button:hover{
     color: white;
     background:#91A61D;
   }
-  
+
   main{
     color: aliceblue;
     display: flex;

@@ -1,19 +1,23 @@
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    </head>
-  <div class="container">
-      <form [formGroup]="formLogin">
-        <div>
-        </div>
-          <div class="rectangle">
-              <img src="https://raw.githubusercontent.com/patriciact29/DEV003-burger-queen-api-client/main/burger-queen/media/LOGO_BQ1.png"  alt="logo" width="350" height="301">
-              <label id="userTittle"class="labelLogin">Usuario</label>
-              <input type="email" formControlName="user" id="user" placeholder="">
-              <label id="passwTittle"class="labelLogin">Contraseña</label>
-              <input type="password" formControlName="password" id="password"  placeholder="">
-              <button type="submit" id="loginBtn" (click)="login()">INGRESAR</button>
-          </div>
-      </form>
-  </div>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<div class="container">
+  <form [formGroup]="formLogin" (ngSubmit)="login()">
+    <fieldset>
+    <div>
+    </div>
+    <div class="rectangle">
+      <img src="https://raw.githubusercontent.com/patriciact29/DEV003-burger-queen-api-client/main/burger-queen/media/LOGO_BQ1.png" alt="logo" width="350" height="301">
+      <label id="userTittle" class="labelLogin">Usuario</label>
+      <input type="email" formControlName="user" id="user" placeholder="">
+      <label id="passwTittle" class="labelLogin">Contraseña</label>
+      <input type="password" formControlName="password" id="password" placeholder="">
+      <button type="submit" id="loginBtn">INGRESAR</button>
+    </div>
+  </fieldset>
+  </form>
+</div>
+<!-- {{ user.value }}
+{{ password.value }} -->
