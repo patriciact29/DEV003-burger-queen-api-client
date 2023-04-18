@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
@@ -53,47 +53,3 @@ export class LoginComponent{
   }
 
   }
-  // ngOnInit(): void {
-  //   throw new Error('Method not implemented.');
-  // }
-
-  // get formlogin() { return this.form.controls; }
-
-  // ngOnInit() {
-  //   this.loginform();
-  // }
-  // loginform(){
-
-  //}
-  // user = new FormControl('', Validators.required);
-  // password = new FormControl('', [Validators.required, Validators.minLength(6)]);
-
-// onSubmit(): void {
-//   const data = this.form.value;
-
-//   this.service.login(data.user, data.password).suscribe({
-//     next:(result) =>{
-//       sessionStorage.setItem('token', result.accesToken)
-//       console.log(result.accesToken);
-//       this.router.navigate(['home']);
-//     }
-
-//     },
-//   })
-
-  // if (this.formlogin.user.status === 'INVALID' || this.formlogin.password.status === 'INAVALID') {
-  //   return;
-  // }
-
-// this.auth$.login(values.user, values.password)
-// .pipe(first())
-// .subscribe(response=>{
-//   debugger;
-//   console.log(response);
-//   if (response){
-//     localStorage.setItem('Token', response);
-//     this.router$.navigate(['/home']);
-//   }
-// })
-//}
-
