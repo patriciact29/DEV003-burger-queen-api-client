@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {AppRoutingModule} from './app.routing.module'
@@ -12,16 +13,23 @@ import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
     UpdatepopupComponent,
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    // RouterModule.forRoot(appRoutes),
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     ToastrModule.forRoot(),
-
   ],
   providers: [],
   bootstrap: [AppComponent]
