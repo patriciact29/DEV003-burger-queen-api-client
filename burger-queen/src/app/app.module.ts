@@ -12,23 +12,16 @@ import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
     UpdatepopupComponent,
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    // RouterModule.forRoot(appRoutes),
-    RouterModule,
-    FormsModule,
-    ReactiveFormsModule,
     HttpClientModule,
     ToastrModule.forRoot(),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

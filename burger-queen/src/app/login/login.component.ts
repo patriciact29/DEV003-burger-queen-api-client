@@ -5,7 +5,6 @@ import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../service/auth.service';
 
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -21,6 +20,7 @@ export class LoginComponent{
     private  builder: FormBuilder,
     private toastr: ToastrService,
     private  auth: AuthService) {
+
     this.formLogin = this.builder.group({
       user: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(6)]]
@@ -53,3 +53,4 @@ export class LoginComponent{
   }
 
   }
+
