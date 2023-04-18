@@ -29,7 +29,6 @@ export class LoginComponent{
   }
 
   login() : void{
-    console.log("aqui");
     const val = this.formLogin.value;
     console.log(val.user, val.password);
 
@@ -39,7 +38,6 @@ export class LoginComponent{
       sessionStorage.setItem('idUser', res.user.id);
       this.router.navigate(['home']);
       console.log(res.accessToken);
-
     },
     error: (error) => {
       console.log(error);
