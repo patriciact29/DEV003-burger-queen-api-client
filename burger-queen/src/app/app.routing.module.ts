@@ -6,7 +6,7 @@ import { HomeComponent } from './home/home.component';
 
 const routes :Routes=[
   {path:'', component: LoginComponent,pathMatch: "full"},//crear objeto por cada ruta
-  {path:'home', /*canActivate: [AuthGuard],*/ component:HomeComponent, pathMatch: "full"}
+  {path:'home', canActivate: [AuthGuard], component:HomeComponent, pathMatch: "full"}
   ]
 
   @NgModule({
