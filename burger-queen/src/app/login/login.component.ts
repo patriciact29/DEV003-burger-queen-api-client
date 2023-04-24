@@ -30,7 +30,7 @@ export class LoginComponent{
 
   login() : void{
     const val = this.formLogin.value;
-    console.log(val.user, val.password);
+    //console.log(val.user, val.password);
 
     this.auth.login(val.user, val.password).subscribe({next:(res) => {
       console.log(res);
@@ -42,7 +42,9 @@ export class LoginComponent{
     error: (error) => {
       console.log(error);
       if (error.status === 400) {
-        this.toastr.error(error.error, 'Credenciales no validas');
+          this.toastr.error(error.error,'ERROR')
+
+        //this.toastr.error(error.error, 'Credenciales no validas');
       } else {
         this.toastr.error('Un error inesperado', 'Error');
       }
