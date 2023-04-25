@@ -6,12 +6,13 @@
 <header>
 
 </header>
-<div class="menú">
+<div class="menu">
+ <app-cards [dataMenu]= "detalleMenu" 
+ *ngFor= "let detalleMenu of menu"></app-cards>
+</div>
+<!-- <div class="pedidos">
     <form [formGroup]="formClient">
         <label for="clientName">Nombre de Cliente: </label>
         <input id="client" type="text" [formControl]="client">
     </form>
-</div>
-<div class="pedidos">
-
-</div>
+</div> -->
