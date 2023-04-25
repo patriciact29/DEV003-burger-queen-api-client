@@ -22,7 +22,7 @@ export class BreakfastComponent implements OnInit {
   ngOnInit(): void {
       this.pService.getProduct()
       .subscribe(res =>{
-      this.databreakfast = res
+      this.databreakfast = res.filter((product) => product.type==='Desayuno')
       })
   
   }
