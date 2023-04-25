@@ -18,10 +18,11 @@
       <button (click)="mostrarMenu()" class="btnNav" id="btnNav">MENÚ</button>
     </nav>
     <div *ngIf="showBreakfast">
-      <app-breakfast></app-breakfast>
+      <app-breakfast ></app-breakfast>
     </div>
     <div *ngIf="!showBreakfast">
       <app-lunch></app-lunch>
+      
     </div>
   </div>
   <div class="resumenPedido">

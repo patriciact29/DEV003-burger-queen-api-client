@@ -1,1 +1,8 @@
-<p>lunch works!HOLA AQUI VA EL COMPONENTE DE MENU </p>
+<div class="card">
+    <div *ngFor="let dataMenu of datalunch">
+        <img class="img" src={{dataMenu.image}} alt="">
+        <div class="nameTitle">Nombre: {{dataMenu.name}}</div>
+        <div class="price">Precio: {{dataMenu.price}}</div>
+    </div>
+</div>
+
