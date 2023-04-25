@@ -11,12 +11,6 @@
     src="https://raw.githubusercontent.com/patriciact29/DEV003-burger-queen-api-client/main/burger-queen/media/Logo_fondo_naranja.png"
     alt="logo" width="95" height="80">
 </header>
-
-<!-- <div class="menu">
- <app-cards [dataMenu]= "detalleMenu" 
- *ngFor= "let detalleMenu of menu"></app-cards>
-</div> -->
-
 <div class="contenedorCajas">
   <div class="contenedorMenus">
     <nav class="nav">
@@ -24,10 +18,11 @@
       <button (click)="mostrarMenu()" class="btnNav" id="btnNav">MENÚ</button>
     </nav>
     <div *ngIf="showBreakfast">
-      <app-breakfast></app-breakfast>
+      <app-breakfast ></app-breakfast>
     </div>
     <div *ngIf="!showBreakfast">
       <app-lunch></app-lunch>
+
     </div>
   </div>
   <div class="resumenPedido">
@@ -37,4 +32,3 @@
     </form>
   </div>
 </div>
-
