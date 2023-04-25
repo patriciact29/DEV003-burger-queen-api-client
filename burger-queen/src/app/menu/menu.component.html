@@ -1,17 +1,31 @@
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 </head>
 <header>
-
+  <img
+    src="https://raw.githubusercontent.com/patriciact29/DEV003-burger-queen-api-client/main/burger-queen/media/Logo_fondo_naranja.png"
+    alt="logo" width="95" height="80">
 </header>
-<div class="menú">
-    <form [formGroup]="formClient">
-        <label for="clientName">Nombre de Cliente: </label>
-        <input id="client" type="text" [formControl]="client">
+<div class="contenedorCajas">
+  <div class="contenedorMenus">
+      <nav class="nav">
+        <form [formGroup]="formDesayuno" (ngSubmit)="desayuno()">
+          <button type="submit" routerLink="/breakfast" class ="btnNav" id="btnNav"> DESAYUNO</button>
+        </form>
+        <button type="submit"class ="btnNav" id="btnNav">MENÚ</button>
+      </nav>
+    <div>
+      <app-breakfast></app-breakfast>
+      <app-lunch></app-lunch>
+    </div>
+  </div>
+  <div class="resumenPedido">
+    <form>
+      <label class ="nombreCliente" for="clientName">Nombre de Cliente: </label>
+      <input class="inputNombre" id="clientName" type="text" [formControl]="clientName">
     </form>
+  </div>
 </div>
-<div class="pedidos">
-
-</div>
+<router-outlet></router-outlet>

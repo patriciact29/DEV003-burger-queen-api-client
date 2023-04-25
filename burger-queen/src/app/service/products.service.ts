@@ -9,8 +9,6 @@ export class ProductsService {
     constructor(private http: HttpClient ) { }
     private apiurl: string = 'http://localhost:8080/products';
 
-
-
     getProduct(): Observable<any> {
 
       const httpOptions = {
@@ -22,7 +20,7 @@ export class ProductsService {
       return this.http.get<any>(this.apiurl, httpOptions)
     }
   }
-  
+
 /*
 {
       "id": 1214,
