@@ -5,17 +5,19 @@ display: flex;
 }
 .nav{
   padding: 15px;
-  width: 805px;
+  width: 100%;
   display: flex;
   gap:10px;
 }
 .contenedorCajas{
 background-color: blue;
 display: flex;
+width: auto;
+height: auto;
 }
 .contenedorMenus{
   background-color: rgba(227, 237, 234, 0.977);
-  width: 674px;
+  width: 70%;
   height: 721px;
 
 }
@@ -23,7 +25,7 @@ display: flex;
 .resumenPedido{
   display: flex;
   background-color: #C8D38E;
-  width: 350px;
+  width: 30%;
   height: 723px;
 
 }
@@ -35,7 +37,7 @@ display: flex;
   border-radius: 30px;
   font-family: 'Anton';
   font-weight: 400;
-  font-size: 30px;
+  font-size: 20px;
   line-height: 38px;
   letter-spacing: 0.03em;
   color: #484746;

@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app.routing.module'
@@ -12,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MenuComponent } from './menu/menu.component';
+import { MenuModule } from './menu/menu.module';
 import { LunchComponent } from './menu/lunch/lunch.component';
 import { BreakfastComponent } from './menu/breakfast/breakfast.component';
 
@@ -20,24 +20,16 @@ import { BreakfastComponent } from './menu/breakfast/breakfast.component';
   declarations: [
     AppComponent,
     LoginComponent,
-    MenuComponent,
-    HomeComponent,
-    BreakfastComponent,
-    LunchComponent,
-    UpdatepopupComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    RouterModule.forChild([
-      {path:'breakfast', component: BreakfastComponent},
-      {path:'lunch', component: LunchComponent},
-    ]),
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     ToastrModule.forRoot(),
+    MenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms'
+import { FormControl } from '@angular/forms'
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,28 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent{
-  formDesayuno: FormGroup
-
+  showBreakfast =true;
 
   clientName = new FormControl('');
-  constructor(
-    private router: Router,
-    private builder: FormBuilder
-  ) {
-   this.formDesayuno = this.builder.group({
+  constructor(private router: Router){}
 
-   });
+  mostrarDesayuno() {
+    this.showBreakfast = true;
   }
-
-    desayuno():void {
-      //const val = this.formDesayuno.value;
-      this.router.navigate(['breakfast']);
-      console.log("aqui");
-
-  }
-  updateName() {
-    this.clientName.setValue('Nancy');
-
+  mostrarMenu() {
+    this.showBreakfast = false;
   }
 
 }

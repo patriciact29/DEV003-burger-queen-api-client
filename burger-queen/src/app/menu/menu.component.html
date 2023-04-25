@@ -10,22 +10,21 @@
 </header>
 <div class="contenedorCajas">
   <div class="contenedorMenus">
-      <nav class="nav">
-        <form [formGroup]="formDesayuno" (ngSubmit)="desayuno()">
-          <button type="submit" routerLink="/breakfast" class ="btnNav" id="btnNav"> DESAYUNO</button>
-        </form>
-        <button type="submit"class ="btnNav" id="btnNav">MENÚ</button>
-      </nav>
-    <div>
+    <nav class="nav">
+      <button (click)="mostrarDesayuno()" class="btnNav" id="btnNav">DESAYUNO</button>
+      <button (click)="mostrarMenu()" class="btnNav" id="btnNav">MENÚ</button>
+    </nav>
+    <div *ngIf="showBreakfast">
       <app-breakfast></app-breakfast>
+    </div>
+    <div *ngIf="!showBreakfast">
       <app-lunch></app-lunch>
     </div>
   </div>
   <div class="resumenPedido">
     <form>
-      <label class ="nombreCliente" for="clientName">Nombre de Cliente: </label>
+      <label class="nombreCliente" for="clientName">Nombre de Cliente: </label>
       <input class="inputNombre" id="clientName" type="text" [formControl]="clientName">
     </form>
   </div>
 </div>
-<router-outlet></router-outlet>
