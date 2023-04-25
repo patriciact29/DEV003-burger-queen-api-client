@@ -8,21 +8,20 @@ import { RouterModule } from '@angular/router';
 import { ToastrModule } from 'ngx-toastr';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { UpdatepopupComponent } from './updatepopup/updatepopup.component';
 import { HttpClientModule } from '@angular/common/http';
-import { MenuComponent } from './menu/menu.component';
 import { MenuModule } from './menu/menu.module';
-import { LunchComponent } from './menu/lunch/lunch.component';
-import { BreakfastComponent } from './menu/breakfast/breakfast.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,

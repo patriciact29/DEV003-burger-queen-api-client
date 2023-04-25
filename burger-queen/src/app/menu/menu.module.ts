@@ -5,7 +5,6 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { MenuComponent } from './menu.component';
 import { BreakfastComponent } from './breakfast/breakfast.component';
 import { LunchComponent } from './lunch/lunch.component';
-import { MenuRoutingModule } from './menu-routing.module';
 
 @NgModule({
   declarations: [
