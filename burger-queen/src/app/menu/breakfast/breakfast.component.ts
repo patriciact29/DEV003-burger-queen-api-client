@@ -18,12 +18,12 @@ interface Products{
 export class BreakfastComponent implements OnInit {
   databreakfast!:Products[];
   constructor(private pService:ProductsService){  }
-  
+
   ngOnInit(): void {
       this.pService.getProduct()
       .subscribe(res =>{
       this.databreakfast = res
       })
-  
+
   }
 }

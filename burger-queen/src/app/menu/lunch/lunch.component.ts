@@ -19,7 +19,7 @@ interface Products {
 export class LunchComponent implements OnInit{
   datalunch!:Products[];
   constructor(private pService:ProductsService){  }
-  
+
   ngOnInit(): void {
 
       this.pService.getProduct()
@@ -27,7 +27,7 @@ export class LunchComponent implements OnInit{
       this.datalunch = res
       console.log(res)
       })
-  
+
   }
 
 }

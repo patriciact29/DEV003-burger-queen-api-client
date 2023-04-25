@@ -28,7 +28,7 @@ export class ProductsService {
         }),
       };
       //public get(apiurl: string){
-      
+
       return this.http.get<Products[]>(this.apiurl, httpOptions)
       }
     }
