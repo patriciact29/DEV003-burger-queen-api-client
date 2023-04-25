@@ -11,13 +11,16 @@ export class ProductsService {
 
     getProduct(): Observable<any> {
 
-      const httpOptions = {
+/*       const httpOptions = {
         headers: new HttpHeaders({
           // Authorization es una propiedad, con el valor del token que reicibimos al iniciar sesión en el login
           Authorization: 'Bearer ' + sessionStorage.getItem('token'),
         }),
-      };
-      return this.http.get<any>(this.apiurl, httpOptions)
+      }; */
+      public get(apiurl: string){
+      
+      return this.http.get(this.apiurl)
+      }
     }
   }
 
