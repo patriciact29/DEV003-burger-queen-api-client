@@ -23,7 +23,7 @@ export class ProductsService {
       }
     }
   }
-  
+
 /*
 {
       "id": 1214,

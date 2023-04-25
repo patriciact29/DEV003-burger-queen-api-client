@@ -1,18 +1,40 @@
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 </head>
 <header>
-
+  <div>
+    <label class="User" for="User">Nombre de Usuario: </label>
+  </div>
+  <img
+    src="https://raw.githubusercontent.com/patriciact29/DEV003-burger-queen-api-client/main/burger-queen/media/Logo_fondo_naranja.png"
+    alt="logo" width="95" height="80">
 </header>
-<div class="menu">
+
+<!-- <div class="menu">
  <app-cards [dataMenu]= "detalleMenu" 
  *ngFor= "let detalleMenu of menu"></app-cards>
-</div>
-<!-- <div class="pedidos">
-    <form [formGroup]="formClient">
-        <label for="clientName">Nombre de Cliente: </label>
-        <input id="client" type="text" [formControl]="client">
-    </form>
 </div> -->
+
+<div class="contenedorCajas">
+  <div class="contenedorMenus">
+    <nav class="nav">
+      <button (click)="mostrarDesayuno()" class="btnNav" id="btnNav">DESAYUNO</button>
+      <button (click)="mostrarMenu()" class="btnNav" id="btnNav">MENÚ</button>
+    </nav>
+    <div *ngIf="showBreakfast">
+      <app-breakfast></app-breakfast>
+    </div>
+    <div *ngIf="!showBreakfast">
+      <app-lunch></app-lunch>
+    </div>
+  </div>
+  <div class="resumenPedido">
+    <form>
+      <label class="nombreCliente" for="clientName">Nombre de Cliente: </label>
+      <input class="inputNombre" id="clientName" type="text" [formControl]="clientName">
+    </form>
+  </div>
+</div>
+

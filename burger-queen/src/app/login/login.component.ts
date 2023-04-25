@@ -43,8 +43,6 @@ export class LoginComponent{
       console.log(error);
       if (error.status === 400) {
           this.toastr.error(error.error,'ERROR')
-
-        //this.toastr.error(error.error, 'Credenciales no validas');
       } else {
         this.toastr.error('Un error inesperado', 'Error');
       }

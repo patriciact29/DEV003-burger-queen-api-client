@@ -1,14 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../service/products.service';
+import { FormControl } from '@angular/forms'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
-export class MenuComponent implements OnInit {
 
-  public menu:Array<any> = []
+// export class MenuComponent implements OnInit {
+
+export class MenuComponent{
+  showBreakfast =true;
+
+  clientName = new FormControl('');
+  constructor(private router: Router){}
+
+  mostrarDesayuno() {
+    this.showBreakfast = true;
+  }
+  mostrarMenu() {
+    this.showBreakfast = false;
+  }
+
+
+ /* public menu:Array<any> = []
   detalleMenu: any;
 
   constructor(private ProductService:ProductsService){
@@ -41,3 +58,4 @@ export class MenuComponent implements OnInit {
     })
   }
 }
+*/
