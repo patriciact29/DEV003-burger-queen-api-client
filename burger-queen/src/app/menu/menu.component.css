@@ -1,39 +1,55 @@
-header{
-background-color: #F5BC4D;
-justify-content: flex-end;
-display: flex;
+header {
+  background-color: #F5BC4D;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.nav{
+
+.User {
+  display: flex;
+  margin-left: 20px;
+  color: #484746;
+  font-family: 'Anton';
+  font-size: 30px;
+}
+
+img {
+  display: flex;
+}
+
+.nav {
   padding: 15px;
   width: 100%;
   display: flex;
-  gap:10px;
+  gap: 10px;
 }
-.contenedorCajas{
-background-color: blue;
-display: flex;
-width: auto;
-height: auto;
+
+.contenedorCajas {
+  display: flex;
+  width: auto;
+  height: auto;
 }
-.contenedorMenus{
+
+.contenedorMenus {
   background-color: rgba(227, 237, 234, 0.977);
   width: 70%;
   height: 721px;
 
 }
 
-.resumenPedido{
+.resumenPedido {
   display: flex;
   background-color: #C8D38E;
   width: 30%;
   height: 723px;
 
 }
-.btnNav{
+
+.btnNav {
   width: 202px;
   height: 51px;
   background: white;
-  border:none;
+  border: none;
   border-radius: 30px;
   font-family: 'Anton';
   font-weight: 400;
@@ -43,15 +59,20 @@ height: auto;
   color: #484746;
 
 }
-nav button:hover{
+
+nav button:hover {
   color: white;
-  background-color:#91A61D;
+  background-color: #91A61D;
 }
-.nombreCliente{
+
+.nombreCliente {
   color: #88472E;
   font-family: 'Anton';
   padding: 10px;
 }
-.inputNombre{
+
+.inputNombre {
   border-radius: 30px;
+  margin-left: 10px;
+
 }
