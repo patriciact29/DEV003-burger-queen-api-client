@@ -24,8 +24,7 @@ export class LunchComponent implements OnInit{
 
       this.pService.getProduct()
       .subscribe(res =>{
-      this.datalunch = res
-      console.log(res)
+      this.datalunch = res.filter((product) => product.type==='Almuerzo')
       })
   
   }
