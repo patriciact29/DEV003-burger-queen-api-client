@@ -1,8 +1,14 @@
+html, body{
+  height:100%;
+  margin: 0;
+}
+
 header {
   background-color: #F5BC4D;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 12vh;
 }
 
 .User {
@@ -26,23 +32,21 @@ img {
 
 .contenedorCajas {
   display: flex;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
 }
 
 .contenedorMenus {
   background-color: rgba(227, 237, 234, 0.977);
   width: 70%;
-  height: 721px;
-
+  height: 88vh;
 }
 
 .resumenPedido {
   display: flex;
   background-color: #C8D38E;
   width: 30%;
-  height: 723px;
-
+  height: 88vh;
 }
 
 .btnNav {

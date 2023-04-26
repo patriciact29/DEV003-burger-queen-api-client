@@ -22,10 +22,18 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
   }
+  @media(max-width:820px){
+    .conteinerhome{
+    width: 675px;
+    height: 614px;
+    }
+  }
   #nav{
       display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      margin: 25px 0 0 25px;
+      margin-top: 15px;
       padding: 20px;
       width: 100%;
       float: left;
