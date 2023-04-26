@@ -27,6 +27,13 @@
   border-radius: 30px;
 }
 
+@media(max-width:820px){
+  .rectangle{
+  width: 600px;
+  height: 614px;
+  }
+}
+
 #user {
   font-family: 'Libre Baskerville', serif;
   box-sizing: border-box;
