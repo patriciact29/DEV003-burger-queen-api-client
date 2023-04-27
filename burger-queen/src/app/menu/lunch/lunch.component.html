@@ -3,11 +3,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/e8699defe9.js" crossorigin="anonymous"></script>
 </head>
 <div class="card">
     <div class ="contenedordeItem"*ngFor="let dataMenu of datalunch">
         <img class="img" src={{dataMenu.image}} alt="">
         <div class="nameTitle">{{dataMenu.name}}</div>
         <div class="price">Precio: $ {{dataMenu.price}}</div>
+        <button class="añadirbtn"><i class="fa-solid fa-circle-plus"></i></button>
     </div>
 </div>

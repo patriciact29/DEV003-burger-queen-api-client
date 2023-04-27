@@ -1,29 +1,44 @@
-.card{
+.card {
   display: flex;
   gap: 20px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
-.img{
+
+.img {
   height: 75px;
   width: 75px;
   display: flex;
 
 
 }
-.contenedordeItem{
+
+.contenedordeItem {
   display: flex;
   flex-direction: column;
-  height: 180px;
+  height: 225px;
   width: 230px;
   border: solid 1px;
-  border-color:rgba(136, 71, 46, 0.25);
-  background-color:white;
+  border-color: rgba(136, 71, 46, 0.25);
+  background-color: white;
   box-shadow: 0 1px 10px rgba(136, 71, 46, 0.25);
   border-radius: 15px;
-  align-items:center;
+  align-items: center;
   justify-content: center;
   gap: 15px;
   font-family: 'Libre Baskerville', serif;
+}
+
+.añadirbtn {
+  border: none;
+  background: none;
+}
+
+.fa-solid {
+  color: rgba(136, 71, 46, 1);
+  margin-bottom: 10px;
+}
+.fa-circle-plus{
+  font-size: 25px;
 }

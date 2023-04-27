@@ -19,7 +19,7 @@
 .contenedordeItem{
   display: flex;
   flex-direction: column;
-  height: 180px;
+  height: 225px;
   width: 230px;
   border: solid 1px;
   border-color:rgba(136, 71, 46, 0.25);
@@ -31,4 +31,16 @@
   gap: 15px;
   font-family: 'Libre Baskerville', serif;
 
+}
+.añadirbtn {
+  border: none;
+  background: none;
+}
+
+.fa-solid {
+  color: rgba(136, 71, 46, 1);
+  margin-bottom: 10px;
+}
+.fa-circle-plus{
+  font-size: 25px;
 }
