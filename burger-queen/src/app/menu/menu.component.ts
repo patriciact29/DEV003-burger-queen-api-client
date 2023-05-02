@@ -10,6 +10,7 @@ import { FormControl } from '@angular/forms'
 
 export class MenuComponent{
   showBreakfast =true;
+  showOrders=true;
 
   clientName = new FormControl('');
   constructor(private ProductService:ProductsService){  }
@@ -21,10 +22,18 @@ export class MenuComponent{
     this.showBreakfast = false;
   }
 
+  showOrder(){
+    this.showOrders = true;
+  }
+  showBill(){
+    this.showOrders=false;
+
+  }
+
   public menu:Array<any> = []
   detalleMenu: any;
 }
 
 
 
- 
+

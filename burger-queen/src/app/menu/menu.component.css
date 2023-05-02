@@ -44,11 +44,19 @@ img {
 
 .resumenPedido {
   display: flex;
+  flex-direction: column;
   background-color: #C8D38E;
-  width: 30%;
+  width: 35%;
   height: 88vh;
 }
-
+.nav2{
+  display: flex;
+  width: 100%;
+  height: 10%;
+  padding: 5px;
+  gap: 5px;
+  margin-top: 10px;
+}
 .btnNav {
   width: 202px;
   height: 51px;
@@ -82,4 +90,26 @@ nav button:hover {
 }
 .cajaBreakfast{
   display: flex;
+}
+.cajaPedidos {
+  display: flex;
+  width: 100%;
+}
+.btnNavPedidos{
+  width: 150px;
+  height: 51px;
+  background: white;
+  border: none;
+  border-radius: 30px;
+  font-family: 'Anton';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 38px;
+  letter-spacing: 0.03em;
+  color: #484746;
+
+}
+.nav2 button:hover {
+  color: white;
+  background-color: #88472E;
 }

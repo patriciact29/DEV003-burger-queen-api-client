@@ -18,7 +18,7 @@
       <button (click)="mostrarMenu()" class="btnNav" id="btnNav">MENÚ</button>
     </nav>
     <div *ngIf="showBreakfast">
-      <div class ="cajaBreakfast">
+      <div class="cajaBreakfast">
         <app-breakfast></app-breakfast>
       </div>
     </div>
@@ -28,10 +28,22 @@
     </div>
   </div>
   <div class="resumenPedido">
-    <form>
-      <label class="nombreCliente" for="clientName">Nombre de Cliente: </label>
-      <input class="inputNombre" id="clientName" type="text" [formControl]="clientName">
-    </form>
+    <nav class="nav2">
+      <button (click)="showOrder()" class="btnNavPedidos" id="btnNav">Resumen de Pedido</button>
+      <button (click)="showBill()" class="btnNavPedidos" id="btnNav">Cuenta</button>
+    </nav>
+    <div class="cajaPedidos">
+      <div *ngIf="showOrders">
+        <app-order></app-order>
+        <form>
+          <label class="nombreCliente" for="clientName">Nombre de Cliente: </label>
+          <input class="inputNombre" id="clientName" type="text" [formControl]="clientName">
+        </form>
+      </div>
+      <div *ngIf="!showOrders">
+        <app-bill></app-bill>
+      </div>
+    </div>
   </div>
 </div>
 <footer></footer>
