@@ -15,15 +15,22 @@ interface Products{
   templateUrl: './breakfast.component.html',
   styleUrls: ['./breakfast.component.css']
 })
+
 export class BreakfastComponent implements OnInit {
   databreakfast!:Products[];
   constructor(private pService:ProductsService){  }
-  
+
+
   ngOnInit(): void {
       this.pService.getProduct()
       .subscribe(res =>{
       this.databreakfast = res.filter((product) => product.type==='Desayuno')
       })
-  
+
+  }
+  addProduct(dataMenu: Products):void{
+    console.log("boton");
+
+
   }
 }

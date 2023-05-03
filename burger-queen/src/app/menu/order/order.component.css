@@ -1,0 +1,11 @@
+.nombreCliente {
+  color: #88472E;
+  font-family: 'Anton';
+  padding: 10px;
+}
+
+.inputNombre {
+  border-radius: 30px;
+  margin-left: 10px;
+
+}
