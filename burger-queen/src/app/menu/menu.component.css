@@ -77,17 +77,6 @@ nav button:hover {
   background-color: #91A61D;
 }
 
-.nombreCliente {
-  color: #88472E;
-  font-family: 'Anton';
-  padding: 10px;
-}
-
-.inputNombre {
-  border-radius: 30px;
-  margin-left: 10px;
-
-}
 .cajaBreakfast{
   display: flex;
 }

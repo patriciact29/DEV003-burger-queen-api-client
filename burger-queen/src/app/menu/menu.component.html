@@ -35,10 +35,7 @@
     <div class="cajaPedidos">
       <div *ngIf="showOrders">
         <app-order></app-order>
-        <form>
-          <label class="nombreCliente" for="clientName">Nombre de Cliente: </label>
-          <input class="inputNombre" id="clientName" type="text" [formControl]="clientName">
-        </form>
+
       </div>
       <div *ngIf="!showOrders">
         <app-bill></app-bill>

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductsService } from '../service/products.service';
-import { FormControl } from '@angular/forms'
+
 
 @Component({
   selector: 'app-menu',
@@ -12,8 +11,7 @@ export class MenuComponent{
   showBreakfast =true;
   showOrders=true;
 
-  clientName = new FormControl('');
-  constructor(private ProductService:ProductsService){  }
+
 
   mostrarDesayuno() {
     this.showBreakfast = true;
