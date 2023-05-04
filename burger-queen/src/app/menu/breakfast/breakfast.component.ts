@@ -20,17 +20,25 @@ export class BreakfastComponent implements OnInit {
   databreakfast!:Products[];
   constructor(private pService:ProductsService){  }
 
-
   ngOnInit(): void {
       this.pService.getProduct()
       .subscribe(res =>{
       this.databreakfast = res.filter((product) => product.type==='Desayuno')
       })
-
   }
+
+ totalOrder : any[] = [];
+
   addProduct(dataMenu: Products):void{
-    console.log("boton");
-
-
+    const add = {
+      qty: 1,
+      product: {
+        name: dataMenu.name,
+        price: dataMenu.price,
+        dateEntry: dataMenu.dateEntry
+      },
+    };
+    this.totalOrder.push(add)
+    console.log(this.totalOrder);
   }
 }
