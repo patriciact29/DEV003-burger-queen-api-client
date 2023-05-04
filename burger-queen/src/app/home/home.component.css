@@ -51,11 +51,16 @@
     color: 000000;
 
   }
-  .fa-light {
-    width: 50px;
-    height: auto;
-
-    }
+  .logoutBtn{
+    height: 50px;
+  }
+  .fa-solid{
+    color: #88472E;
+  }
+  .fa-right-from-bracket{
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
 
   nav button:hover{
     color: white;

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ProductsService } from 'src/app/service/products.service';
 import { FormControl } from '@angular/forms'
 
-interface Products{
+interface Products {
   _id: string,
   name: string,
   price: number,
@@ -17,6 +17,6 @@ interface Products{
 })
 export class OrderComponent {
   clientName = new FormControl('');
-  constructor(private ProductService:ProductsService){  }
+  constructor(private ProductService: ProductsService) { }
 
 }
