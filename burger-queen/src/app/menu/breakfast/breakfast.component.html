@@ -10,6 +10,6 @@
         <img class="img" src={{dataMenu.image}} alt="">
         <div class="nameTitle">{{dataMenu.name}}</div>
         <div class="price">Precio: $ {{dataMenu.price}}</div>
-        <button class="añadirbtn"><i class="fa-solid fa-circle-plus"></i></button>
+        <button (click)="addProduct(dataMenu)"class="añadirbtn"><i class="fa-solid fa-circle-plus"></i></button>
     </div>
 </div>
