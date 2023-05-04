@@ -22,7 +22,7 @@ export class OrderService {
 
   constructor(private http: HttpClient) { }
   private apiurl: string = 'http://localhost:8080/orders';
-
+//crear orden
   createOrder(): Observable<Order[]> {
 
     const httpOptions = {
@@ -34,7 +34,7 @@ export class OrderService {
 
     return this.http.post<Order[]>(this.apiurl, httpOptions)
     }
-
+// obtener orden
     getOrders(): Observable<Order[]> {
 
       const httpOptions = {
