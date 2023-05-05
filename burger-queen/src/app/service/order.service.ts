@@ -22,6 +22,21 @@ export class OrderService {
 
   constructor(private http: HttpClient) { }
   private apiurl: string = 'http://localhost:8080/orders';
+
+  dataOrder: any = {
+    products: [],
+  }
+
+//crear lista
+  orderList(dataMenu:Products): void{
+    const add = {
+      name: dataMenu.name,
+      price: dataMenu.price,
+  };
+  this.dataOrder.products.push(add)
+  console.log(this.dataOrder.products)
+  }
+
 //crear orden
   createOrder(): Observable<Order[]> {
 
@@ -34,6 +49,7 @@ export class OrderService {
 
     return this.http.post<Order[]>(this.apiurl, httpOptions)
     }
+
 // obtener orden
     getOrders(): Observable<Order[]> {
 
@@ -46,7 +62,4 @@ export class OrderService {
 
       return this.http.get<Order[]>(this.apiurl, httpOptions)
       }
-
-
-
 }

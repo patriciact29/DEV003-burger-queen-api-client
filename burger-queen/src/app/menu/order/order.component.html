@@ -2,3 +2,10 @@
   <label class="nombreCliente" for="clientName">Nombre de Cliente: </label>
   <input class="inputNombre" id="clientName" type="text" [formControl]="clientName">
 </form>
+
+<div class="card">
+  <div class ="contenedordeItem"*ngFor="let dataOrder of dataOrder">
+      <div class="nameTitle">{{dataOrder.name}}</div>
+      <div class="price">Precio: $ {{dataOrder.price}}</div>
+  </div>
+</div>
