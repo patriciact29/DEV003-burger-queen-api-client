@@ -27,7 +27,15 @@ export class OrderComponent {
   ngOnInit(): void {
     this.dataOrder = this.orderServ.dataOrder.products
   }
-
+  delete(product:any){
+    this.orderServ.delete(product)
+  }
+  increase(dataOrder:any){
+    this.orderServ.increment(dataOrder)
+  }
+  decrease(dataOrder:any){
+    this.orderServ.decrease(dataOrder)
+  }
 }
 
 

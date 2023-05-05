@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/service/products.service';
+import { OrderService } from 'src/app/service/order.service';
 
 interface Products {
   _id: string,
@@ -18,15 +19,16 @@ interface Products {
 
 export class LunchComponent implements OnInit{
   datalunch!:Products[];
-  constructor(private pService:ProductsService){  }
-  
-  ngOnInit(): void {
+  constructor(private pService:ProductsService, private orderServ:OrderService){  }
 
+  ngOnInit(): void {
       this.pService.getProduct()
       .subscribe(res =>{
       this.datalunch = res.filter((product) => product.type==='Almuerzo')
       })
-  
   }
 
+  addProduct(dataMenu:Products):void{
+    this.orderServ.orderList(dataMenu)
+  }
 }

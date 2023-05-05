@@ -30,11 +30,27 @@ export class OrderService {
 //crear lista
   orderList(dataMenu:Products): void{
     const add = {
+      qty: 1,
       name: dataMenu.name,
       price: dataMenu.price,
   };
   this.dataOrder.products.push(add)
-  console.log(this.dataOrder.products)
+  }
+//delete
+delete(product:any){
+  const index = this.dataOrder.products.indexOf(product);
+  this.dataOrder.products.splice(index, 1);
+}
+//sumar qty
+  increment(dataOrder:any){
+    dataOrder.qty++;
+  }
+//restar qty
+  decrease(dataOrder:any){
+    dataOrder.qty--;
+    if(dataOrder.qty===0){
+      this.delete(dataOrder)
+    }
   }
 
 //crear orden
