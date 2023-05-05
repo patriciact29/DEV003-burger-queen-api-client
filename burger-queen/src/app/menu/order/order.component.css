@@ -7,5 +7,46 @@
 .inputNombre {
   border-radius: 30px;
   margin-left: 10px;
+}
 
+.contenedordeItem{
+  display: flex;
+  margin: 7px 5px 0px 5px;
+  justify-content: flex-end;
+  gap: 15px;
+}
+.nameTitle{
+  font-family: 'Anton';
+  font-size: 15px;
+  width: 180;
+  color: #484746;
+}
+.productQty{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 120px;
+  height: 30px;
+  background: white;
+  border: none;
+  border-radius: 30px;
+  font-family: 'Anton';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 38px;
+  letter-spacing: 0.03em;
+  color: #484746;
+}
+
+.qtyBtn{
+  background: none;
+  border: none;
+}
+.delete{
+  border-radius: 50%;
+  border: #ffff;
+  background: #ffff;
+  height: 30px;
+  width: 30px;
 }

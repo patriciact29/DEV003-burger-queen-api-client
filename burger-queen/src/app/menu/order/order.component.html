@@ -1,11 +1,22 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/e8699defe9.js" crossorigin="anonymous"></script>
+</head>
 <form>
   <label class="nombreCliente" for="clientName">Nombre de Cliente: </label>
   <input class="inputNombre" id="clientName" type="text" [formControl]="clientName">
 </form>
 
 <div class="card">
-  <div class ="contenedordeItem"*ngFor="let dataOrder of dataOrder">
+  <div class ="contenedordeItem" *ngFor="let dataOrder of dataOrder">
       <div class="nameTitle">{{dataOrder.name}}</div>
-      <div class="price">Precio: $ {{dataOrder.price}}</div>
+      <div class="productQty">
+        <button class="qtyBtn" (click)="decrease(dataOrder)"><i class="fa-solid fa-minus"></i></button>
+        <div class="qty">{{dataOrder.qty}}</div>
+        <button class="qtyBtn" (click)="increase(dataOrder)"><i class="fa-solid fa-plus"></i></button>
+      </div>
+      <button class="delete" (click)="delete(dataOrder)"><i class="fa-regular fa-trash-can"></i></button>
   </div>
 </div>
