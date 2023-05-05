@@ -8,10 +8,9 @@ import { Component } from '@angular/core';
 })
 
 export class MenuComponent{
+
   showBreakfast =true;
   showOrders=true;
-
-
 
   mostrarDesayuno() {
     this.showBreakfast = true;

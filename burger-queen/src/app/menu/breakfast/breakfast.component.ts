@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/service/products.service';
+import { OrderService } from 'src/app/service/order.service';
 
 interface Products{
   _id: string,
@@ -18,7 +19,7 @@ interface Products{
 
 export class BreakfastComponent implements OnInit {
   databreakfast!:Products[];
-  constructor(private pService:ProductsService){  }
+  constructor(private pService:ProductsService, private orderServ:OrderService){  }
 
   ngOnInit(): void {
       this.pService.getProduct()
@@ -27,18 +28,7 @@ export class BreakfastComponent implements OnInit {
       })
   }
 
- totalOrder : any[] = [];
-
-  addProduct(dataMenu: Products):void{
-    const add = {
-      qty: 1,
-      product: {
-        name: dataMenu.name,
-        price: dataMenu.price,
-        dateEntry: dataMenu.dateEntry
-      },
-    };
-    this.totalOrder.push(add)
-    console.log(this.totalOrder);
+  addProduct(dataMenu:Products):void{
+    this.orderServ.orderList(dataMenu)
   }
 }
