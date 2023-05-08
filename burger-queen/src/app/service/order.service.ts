@@ -71,7 +71,7 @@ delete(product:any){
     }
 
 // obtener orden
-    getOrders(): Observable<Order[]> {
+    getOrders(): Observable<any> {
 
       const httpOptions = {
         headers: new HttpHeaders({
@@ -80,7 +80,7 @@ delete(product:any){
         }),
       };
 
-      return this.http.get<Order[]>(this.apiurl, httpOptions)
+      return this.http.get<any>(this.apiurl, httpOptions)
       }
 }
 //comentario
