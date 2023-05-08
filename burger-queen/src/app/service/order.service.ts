@@ -24,6 +24,8 @@ export class OrderService {
   private apiurl: string = 'http://localhost:8080/orders';
 
   dataOrder: any = {
+    client:"",
+    status:"",
     products: [],
   }
 
@@ -33,8 +35,11 @@ export class OrderService {
       qty: 1,
       name: dataMenu.name,
       price: dataMenu.price,
+      dataEntry:new Date().toLocaleString()
+
   };
     this.dataOrder.products.push(add)
+    console.log(this.dataOrder)
   }
 //delete
 delete(product:any){
@@ -54,7 +59,7 @@ delete(product:any){
   }
 
 //crear orden
-  createOrder(): Observable<Order[]> {
+  createOrder(order:any): Observable<Order[]> {
 
     const httpOptions = {
       headers: new HttpHeaders({
@@ -62,8 +67,7 @@ delete(product:any){
         Authorization: 'Bearer ' + sessionStorage.getItem('token'),
       }),
     };
-
-    return this.http.post<Order[]>(this.apiurl, httpOptions)
+    return this.http.post<Order[]>(this.apiurl, order, httpOptions)
     }
 
 // obtener orden
