@@ -50,3 +50,18 @@
   height: 30px;
   width: 30px;
 }
+.sendBtn{
+  font-family: 'Anton';
+  font-size: 25px;
+  border-radius: 30px;
+  border:#88472E;
+  background-color: #88472E;
+  color: #ffff;
+  height: 50px;
+  width: 150px;
+  margin: 20px 5px 10px 100px;
+}
+.sendBtn:hover {
+  color: #484746;
+  background-color: #ffff;
+}
