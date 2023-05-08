@@ -2,11 +2,13 @@
 
 
 <div class="orderList">
-  <div class ="contenedordeItem" *ngFor="let dataOrder of dataOrder">
-      <div class="nameTitle">{{dataOrder.client}}</div>
-      <div class="dataEntry">{{dataOrder.dataEntry}}</div>
-      <div class="status">{{dataOrder.status}}</div>
-      <div class="products">{{dataOrder.status}}</div>
+  <div class="contenedordeItem" *ngFor="let dataOrder of dataOrder">
+    <div class="nameTitle">{{dataOrder.client}}</div>
+    <div class="dataEntry">{{dataOrder.dataEntry}}</div>
+    <div class="status">{{dataOrder.status}}</div>
+    <div class="contenedordeItem" *ngFor="let dataOrderProducts of dataOrder.products">
+      <div class="qty">{{dataOrderProducts.qty}}</div>
+      <div class="qty">{{dataOrderProducts.product.name}}</div>
+    </div>
   </div>
 </div>
-

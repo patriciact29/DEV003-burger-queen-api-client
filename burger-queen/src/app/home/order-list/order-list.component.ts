@@ -1,18 +1,5 @@
 import { Component, OnInit} from '@angular/core';
 import { OrderService } from 'src/app/service/order.service';
-import { Products } from 'src/app/service/products.service';
-
-interface Order {
-  userId: string | null;
-  client: string;
-  tableNum: number | null;
-  products: [{
-    qty: number;
-    product: Products[];
-  }];
-  status: string;
-  dataEntry: Date;
-};
 
 @Component({
   selector: 'app-order-list',
@@ -21,8 +8,8 @@ interface Order {
 })
 export class OrderListComponent implements OnInit {
 
-  dataOrder!: Order[];
-  /* dataOrderProducts!:any; */
+  dataOrder:any[] = [];
+
   constructor(private orderServ:OrderService) { }
 
    ngOnInit(): void {
