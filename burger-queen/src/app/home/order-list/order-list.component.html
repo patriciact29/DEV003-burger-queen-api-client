@@ -1,1 +1,12 @@
 <p>order-list works!</p>
+
+
+<div class="orderList">
+  <div class ="contenedordeItem" *ngFor="let dataOrder of dataOrder">
+      <div class="nameTitle">{{dataOrder.client}}</div>
+      <div class="dataEntry">{{dataOrder.dataEntry}}</div>
+      <div class="status">{{dataOrder.status}}</div>
+      <div class="products">{{dataOrder.status}}</div>
+  </div>
+</div>
+
