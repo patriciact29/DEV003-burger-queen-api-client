@@ -9,7 +9,7 @@
   <input class="inputNombre" id="clientName" type="text" [formControl]="clientName">
 </form>
 
-<div class="card">
+<div class="orderList">
   <div class ="contenedordeItem" *ngFor="let dataOrder of dataOrder">
       <div class="nameTitle">{{dataOrder.name}}</div>
       <div class="productQty">
@@ -20,3 +20,5 @@
       <button class="delete" (click)="delete(dataOrder)"><i class="fa-regular fa-trash-can"></i></button>
   </div>
 </div>
+
+<button class="sendBtn" (click)="createOrder()">ENVIAR</button>

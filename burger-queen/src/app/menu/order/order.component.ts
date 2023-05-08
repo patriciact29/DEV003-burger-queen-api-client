@@ -36,6 +36,9 @@ export class OrderComponent {
   decrease(dataOrder:any){
     this.orderServ.decrease(dataOrder)
   }
+  createOrder(){
+    console.log("works")
+  }
 }
 
 

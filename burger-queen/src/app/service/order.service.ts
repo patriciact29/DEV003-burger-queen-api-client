@@ -34,7 +34,7 @@ export class OrderService {
       name: dataMenu.name,
       price: dataMenu.price,
   };
-  this.dataOrder.products.push(add)
+    this.dataOrder.products.push(add)
   }
 //delete
 delete(product:any){
