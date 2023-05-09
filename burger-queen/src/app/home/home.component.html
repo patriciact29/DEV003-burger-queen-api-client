@@ -12,7 +12,7 @@
         <button (click)="showtable()" type="button" id="home" class="btnNav" name="SeleccionarMesa">SELECIONAR
           MESA</button>
         <button (click)="showOrderList()" type="button" id="characters" class="btnNav" name="Pedidos">PEDIDOS</button>
-        <button class="logoutBtn"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+        <button (click) ="logout()" class="logoutBtn"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
       </nav>
       <main class="tableContainer">
         <div *ngIf="showTables" class="tablesbtns">

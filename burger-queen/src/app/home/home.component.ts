@@ -23,4 +23,8 @@ export class HomeComponent {
   showMenu(){
     this.router.navigate(['menu'])
   }
+  logout(){
+    this.router.navigate([''])
+    sessionStorage.clear()
+  }
 }
