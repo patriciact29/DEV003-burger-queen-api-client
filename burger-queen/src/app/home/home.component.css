@@ -67,10 +67,9 @@
     background:#91A61D;
   }
 
-  main{
+  .tableContainer{
     color: aliceblue;
     display: flex;
-    align-items: center;
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -109,3 +108,9 @@
   .fa-arrow-right-from-bracket{
     font-size: 40px;
   }
+.cajaOrders{
+  display: flex;
+  width: 80%;
+  height: auto;
+  justify-content: center;
+}

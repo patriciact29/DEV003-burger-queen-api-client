@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,7 +9,9 @@ import { Component } from '@angular/core';
 })
 
 export class MenuComponent{
-
+constructor(
+  private router : Router
+){}
   showBreakfast =true;
   showOrders=true;
 
@@ -26,7 +29,9 @@ export class MenuComponent{
     this.showOrders=false;
 
   }
-
+  returnHome(){
+    this.router.navigate(['home'])
+  }
   public menu:Array<any> = []
   detalleMenu: any;
 }

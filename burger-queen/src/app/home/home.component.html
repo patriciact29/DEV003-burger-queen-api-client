@@ -1,31 +1,34 @@
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/e8699defe9.js" crossorigin="anonymous"></script>
-  </head>
-    <div class="container">
-      <form>
-        <div class="conteinerhome">
-          <nav id="nav">
-            <button type="button" id="home" class ="btnNav" name="SeleccionarMesa">SELECIONAR MESA</button>
-            <button type="button" id="characters" class ="btnNav" name="Pedidos">PEDIDOS</button>
-            <button class="logoutBtn"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
-
-          </nav>
-          <main>
-            <div class="tablesbtns">
-              <button type="submit" class="tableBtn">Mesa 1</button>
-              <button type="submit" class="tableBtn">Mesa 2</button>
-              <button type="submit" class="tableBtn">Mesa 3</button>
-              <button type="submit" class="tableBtn">Mesa 4</button>
-              <button type="submit" class="tableBtn">Mesa 5</button>
-              <button type="submit" class="tableBtn">Mesa 6</button>
-              <button type="submit" class="tableBtn">Mesa 7</button>
-              <button type="submit" class="tableBtn">Mesa 8</button>
-            </div>
-          </main>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/e8699defe9.js" crossorigin="anonymous"></script>
+</head>
+<div class="container">
+  <form>
+    <div class="conteinerhome">
+      <nav id="nav">
+        <button (click)="showtable()" type="button" id="home" class="btnNav" name="SeleccionarMesa">SELECIONAR
+          MESA</button>
+        <button (click)="showOrderList()" type="button" id="characters" class="btnNav" name="Pedidos">PEDIDOS</button>
+        <button class="logoutBtn"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+      </nav>
+      <main class="tableContainer">
+        <div *ngIf="showTables" class="tablesbtns">
+          <button (click)="showMenu()" type="submit" class="tableBtn">Mesa 1</button>
+          <button (click)="showMenu()" type="submit" class="tableBtn">Mesa 2</button>
+          <button (click)="showMenu()" type="submit" class="tableBtn">Mesa 3</button>
+          <button (click)="showMenu()" type="submit" class="tableBtn">Mesa 4</button>
+          <button (click)="showMenu()" type="submit" class="tableBtn">Mesa 5</button>
+          <button (click)="showMenu()" type="submit" class="tableBtn">Mesa 6</button>
+          <button (click)="showMenu()" type="submit" class="tableBtn">Mesa 7</button>
+          <button (click)="showMenu()" type="submit" class="tableBtn">Mesa 8</button>
         </div>
-      </form>
+        <div *ngIf="!showTables" class="cajaOrders">
+            <app-order-list></app-order-list>
+        </div>
+      </main>
     </div>
+  </form>
+</div>

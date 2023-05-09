@@ -1,0 +1,54 @@
+* {
+  margin: 0
+}
+
+.orderList {
+  display: flex;
+  gap: 30px;
+  flex-direction: row;
+  justify-content: center;
+  width: auto;
+  height: auto;
+}
+
+h2 {
+  color: black;
+  font-size: 15px;
+}
+
+.contenedordeItem {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  width: 250px;
+  color: black;
+  border: solid 3px;
+  border-color: rgba(136, 71, 46, 0.25);
+  box-shadow: 0 1px 10px rgba(136, 71, 46, 0.25);
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-family: 'Libre Baskerville', serif;
+  padding: 20px;
+  margin: 15px 0 15px 0;
+}
+
+.contenedordeItemProducts {
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+
+
+}
+.btnCheck{
+  width: 100px;
+  height: 30px;
+  color: white;
+  background:#f19000;
+  border:none;
+  border-radius: 30px;
+  font-size: 10px;
+  padding: 10px;
+}

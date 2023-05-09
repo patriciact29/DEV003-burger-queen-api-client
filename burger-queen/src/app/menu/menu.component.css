@@ -101,3 +101,7 @@ nav button:hover {
   color: white;
   background-color: #88472E;
 }
+.btnHamburguesa{
+  border:none;
+  background: none;
+}
