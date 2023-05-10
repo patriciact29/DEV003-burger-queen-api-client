@@ -11,7 +11,7 @@
 
 <div class="orderList">
   <div class ="contenedordeItem" *ngFor="let dataOrder of dataOrder">
-      <div class="nameTitle">{{dataOrder.name}}</div>
+      <div class="nameTitle">{{dataOrder.product.name}}</div>
       <div class="productQty">
         <button class="qtyBtn" (click)="decrease(dataOrder)"><i class="fa-solid fa-minus"></i></button>
         <div class="qty">{{dataOrder.qty}}</div>

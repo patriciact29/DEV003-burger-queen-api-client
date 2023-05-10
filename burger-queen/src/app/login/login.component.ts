@@ -32,11 +32,9 @@ export class LoginComponent{
     //console.log(val.user, val.password);
 
     this.auth.login(val.user, val.password).subscribe({next:(res) => {
-      console.log(res);
       sessionStorage.setItem('token', res.accessToken);
       sessionStorage.setItem('idUser', res.user.id);
       this.router.navigate(['home']);
-      console.log(res.accessToken);
     },
     error: (error) => {
       console.log(error);
