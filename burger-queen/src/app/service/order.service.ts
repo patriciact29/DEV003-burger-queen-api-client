@@ -30,36 +30,34 @@ export class OrderService {
   }
 
 //crear lista
-  orderList(dataMenu:Products): void{
+orderList(dataMenu:Products): void{
     const add = {
       qty: 1,
+      product:{dataEntry:new Date().toLocaleString(),
       name: dataMenu.name,
-      price: dataMenu.price,
-      dataEntry:new Date().toLocaleString()
-
+      price: dataMenu.price}
   };
     this.dataOrder.products.push(add)
-    console.log(this.dataOrder)
   }
 //delete
 delete(product:any){
-  const index = this.dataOrder.products.indexOf(product);
+  const index = this.dataOrder.products.product.indexOf(product);
   this.dataOrder.products.splice(index, 1);
 }
 //sumar qty
   increment(dataOrder:any){
-    dataOrder.qty++;
+    dataOrder.products.qty++;
   }
 //restar qty
   decrease(dataOrder:any){
-    dataOrder.qty--;
-    if(dataOrder.qty===0){
+    dataOrder.products.qty--;
+    if(dataOrder.products.qty===0){
       this.delete(dataOrder)
     }
   }
 
 //crear orden
-  createOrder(order:any): Observable<Order[]> {
+  createOrder(order:any): Observable<any> {
 
     const httpOptions = {
       headers: new HttpHeaders({
@@ -67,7 +65,7 @@ delete(product:any){
         Authorization: 'Bearer ' + sessionStorage.getItem('token'),
       }),
     };
-    return this.http.post<Order[]>(this.apiurl, order, httpOptions)
+    return this.http.post<any>(this.apiurl, order, httpOptions)
     }
 
 // obtener orden
