@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MenuModule } from './menu/menu.module';
+import { OrderListComponent } from './home/order-list/order-list.component';
 
 
 
@@ -17,7 +18,8 @@ import { MenuModule } from './menu/menu.module';
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    OrderListComponent
   ],
   imports: [
     BrowserModule,

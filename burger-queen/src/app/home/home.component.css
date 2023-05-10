@@ -51,24 +51,29 @@
     color: 000000;
 
   }
-  .fa-light {
-    width: 50px;
-    height: auto;
-
-    }
+  .logoutBtn{
+    height: 50px;
+  }
+  .fa-solid{
+    color: #88472E;
+  }
+  .fa-right-from-bracket{
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
 
   nav button:hover{
     color: white;
     background:#91A61D;
   }
 
-  main{
+  .tableContainer{
     color: aliceblue;
     display: flex;
-    align-items: center;
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    justify-content: center;
   }
   .tablesbtns{
     display: flex;
@@ -104,3 +109,9 @@
   .fa-arrow-right-from-bracket{
     font-size: 40px;
   }
+.cajaOrders{
+  display: flex;
+  width: 80%;
+  height: auto;
+  justify-content: center;
+}

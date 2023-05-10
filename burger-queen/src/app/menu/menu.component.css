@@ -69,7 +69,6 @@ img {
   line-height: 38px;
   letter-spacing: 0.03em;
   color: #484746;
-
 }
 
 nav button:hover {
@@ -82,6 +81,7 @@ nav button:hover {
 }
 .cajaPedidos {
   display: flex;
+  justify-content: center;
   width: 100%;
 }
 .btnNavPedidos{
@@ -101,4 +101,8 @@ nav button:hover {
 .nav2 button:hover {
   color: white;
   background-color: #88472E;
+}
+.btnHamburguesa{
+  border:none;
+  background: none;
 }
