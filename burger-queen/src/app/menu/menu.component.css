@@ -81,6 +81,7 @@ nav button:hover {
 }
 .cajaPedidos {
   display: flex;
+  justify-content: center;
   width: 100%;
 }
 .btnNavPedidos{

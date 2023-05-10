@@ -10,6 +10,7 @@ export class OrderListComponent implements OnInit {
 
   dataOrder:any[] = [];
 
+
   constructor(private orderServ:OrderService) { }
 
    ngOnInit(): void {

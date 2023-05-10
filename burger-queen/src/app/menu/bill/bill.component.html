@@ -1,1 +1,18 @@
-<p>HOLA</p>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/e8699defe9.js" crossorigin="anonymous"></script>
+</head>
+<div class="orderList">
+  <div class="contenedordeItem" *ngFor="let dataOrder of dataOrder">
+    <div class="nameTitle">{{dataOrder.name}}</div>
+    <!-- <div class="nameTitle">{{dataOrder.price}}</div>
+      <div class="nameTitle">{{dataOrder.qty}}</div> -->
+    <div class="priceTitle">$ {{dataOrder.price * dataOrder.qty}}</div>
+  </div>
+  <div class="totalPrice">
+  <h3>TOTAL: $</h3>
+  <p>{{totalPrice}}</p>
+  </div>
+</div>
